@@ -3,8 +3,8 @@
 Desktop virtual pet deer.
 
 ## LOL
-<p style="text-align:center">
-	![Pet Screenshot](screenshot.gif)
+<p align="center">
+	<img src="screenshot.gif" alt="Screenshot" />
 </p>
 
 
