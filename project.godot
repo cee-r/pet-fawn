@@ -10,9 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Pet Fawn"
+config/name="Fawn"
+config/description="Desktop virtual pet deer."
+config/version="1.0.0"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://808ugghusdto"
 
 [dotnet]
 
