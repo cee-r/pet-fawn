@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://b470o32m57ybx"]
+
+[ext_resource type="Script" uid="uid://cijmod4djw7ql" path="res://scenes/pet/pet.gd" id="1_ggc1i"]
+[ext_resource type="Texture2D" uid="uid://cjopus2x8uutc" path="res://assets/Fawn.png" id="1_mdqe4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wqpi"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd1if"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmkkh"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nmc3"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axfbl"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c8qe"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hio3l"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekye6"]
+atlas = ExtResource("1_mdqe4")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jn77u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wqpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd1if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmkkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nmc3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axfbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c8qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hio3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekye6")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="Pet" type="Node2D"]
+script = ExtResource("1_ggc1i")
+
+[node name="Fawn" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_jn77u")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.0508033
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

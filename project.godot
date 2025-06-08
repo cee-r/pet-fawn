@@ -13,8 +13,19 @@ config_version=5
 config/name="Fawn"
 config/description="Desktop virtual pet deer."
 config/version="1.0.0"
+run/main_scene="uid://67x503inwaqc"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://808ugghusdto"
+
+[display]
+
+window/size/initial_position_type=0
+window/size/resizable=false
+window/size/borderless=true
+window/size/always_on_top=true
+window/size/transparent=true
+window/subwindows/embed_subwindows=false
+window/per_pixel_transparency/allowed=true
 
 [dotnet]
 
