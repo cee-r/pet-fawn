@@ -3,7 +3,10 @@
 Desktop virtual pet deer.
 
 ## LOL
-![Pet Screenshot](screenshot.gif)
+<p style="text-align:center">
+	![Pet Screenshot](screenshot.gif)
+</p>
+
 
 ## Project Settings
 
