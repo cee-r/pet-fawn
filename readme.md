@@ -2,6 +2,9 @@
 
 Desktop virtual pet deer.
 
+## LOL
+![Pet Screenshot](screenshot.gif)
+
 ## Project Settings
 
 ### Application
